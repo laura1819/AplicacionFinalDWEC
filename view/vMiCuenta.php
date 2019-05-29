@@ -32,9 +32,9 @@
                                         <div class="form-group">
                                             <label for="username" >Codigo de Usuario:</label>
                                             <input type="text" name="usuario" value="<?php echo $_SESSION['usuario']->getCodUsuario(); ?>" disabled>* <br>  <br>                                         
+                                      
 
-
-
+                                       
                                             <label for="password" class="text-white">Descripcion de Usuario:</label>
                                             <input type="text" name="descripcion" value="<?php
                                             if ($_REQUEST['descripcion'] != null) {
@@ -46,13 +46,13 @@
                                                    <?php
                                                    echo "<font color='#FF0000' size='2px'>$aErrores[descripcion]</font>"; //Mostrará el mensaje de la variable en caso de que éste exista.
                                                    ?></br><br> 
-                                            <label for="password" class="text-white">Visitas del Usuario:</label>    
-                                            <input type="text" name="usuario" size="3" value="<?php echo $_SESSION['usuario']->getNumAccesos(); ?>" disabled>* <br><br> 
-
-                                            <label for="password" class="text-white">Perfil del usuario:</label>    
-                                            <input type="text" name="usuario" size="12" value="<?php echo $_SESSION['usuario']->getPerfil(); ?>" disabled>*  <br><br> 
-
-
+                                              <label for="password" class="text-white">Visitas del Usuario:</label>    
+                                              <input type="text" name="usuario" size="3" value="<?php echo $_SESSION['usuario']->getNumAccesos(); ?>" disabled>* <br><br> 
+                                            
+                                             <label for="password" class="text-white">Perfil del usuario:</label>    
+                                             <input type="text" name="usuario" size="12" value="<?php echo $_SESSION['usuario']->getPerfil(); ?>" disabled>*  <br><br> 
+                                            
+                                           
                                         </div>
 
 
@@ -67,9 +67,6 @@
                         </div>
                     </div>
                 </div>
-                <pre>
-                    <?php print_r($_SESSION); ?>
-                </pre>
             </header>
 
 

@@ -16,6 +16,25 @@ if (isset($_SESSION['pagina'])) {
     $vista = $vistas[$_SESSION['pagina']];
 }
 ?>
+
+<script>
+    function crearPagina() {
+
+        //Primer formulario
+
+        var a1 = document.createElement("form");
+        a1.setAttribute("method", "get");
+        a1.setAttribute("name", "primero");
+        document.body.appendChild(a1);
+
+        var b1 = document.createElement("label");
+        var textob1 = document.createTextNode("Pie de pagina con DOM");
+        b1.appendChild(textob1);
+        document.primero.appendChild(b1);
+
+       
+    }
+</script>
 <html>
     <head>
 
@@ -34,6 +53,7 @@ if (isset($_SESSION['pagina'])) {
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="webroot/css/estiloscarrousel.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/estiloscalcula.css">
 
         <!-- Plugin CSS -->
         <link href="webroot/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
@@ -60,13 +80,9 @@ if (isset($_SESSION['pagina'])) {
                     <div class="col-md-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Repositorio</h4>
                         <ul class="list-inline mb-0">
+                           
                             <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="http://daw-usgit.sauces.local/laura.ferfer.7/ProyectoFinalMVC" target="blank">
-                                    <i class="fab fa-gitlab"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/laura1819/ProyectoFinalMVC" target="blank">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/laura1819/AplicacionFinalDWEC" target="blank">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </li>
@@ -90,10 +106,12 @@ if (isset($_SESSION['pagina'])) {
                 <small>Copyright &copy; 2018 - 2019 Laura Fernandez </small>
                 <li class="list-inline-item">
                     <a class="btn btn-outline-light btn-social text-center rounded-circle" href="doc/rss/rss.xml">
+                       
                         <i class="fas fa-rss"></i>
                     </a>
                 </li>
-
+                <li> <a href="mailto:tucorreo@gmail.com">lauradaw@gmail.com</a></li>
+                
             </div>
         </div>
 
@@ -111,5 +129,8 @@ if (isset($_SESSION['pagina'])) {
 
         <!-- Custom scripts for this template -->
         <script src="webroot/js/freelancer.min.js"></script>
+        
+        <script src="webroot/js/repr.js"></script>
+        <script src="webroot/js/index.js"></script>
     </body>
 </html>

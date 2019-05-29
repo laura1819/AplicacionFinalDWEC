@@ -42,6 +42,7 @@ $controladores = [
     'rest' => 'controller/cRest.php',
     'importar' => 'controller/cImportar.php',
     'exportar' => 'controller/cExportar.php',
+    'web' => 'controller/cweb.php',
 ];
 
 $vistas = [
@@ -67,5 +68,6 @@ $vistas = [
     'rest' => 'view/vRest.php',
     'importar' => 'view/vImportar.php',
     'exportar' => 'view/vExportar.php',
+    'web' => 'view/vweb.php',
 ];
 ?>

@@ -7,9 +7,7 @@
  * @modifiedDate 15/04/2019
  * @version 1.5
  */
-echo " <pre> ";
-print_r($_SESSION);
-echo " </pre> ";
+
 
 
 

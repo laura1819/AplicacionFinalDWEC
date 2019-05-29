@@ -57,6 +57,12 @@ if (isset($_REQUEST['wip'])) { // si pulsamos editar perfil
     exit;
 }
 
+if (isset($_REQUEST['websql'])) { // si pulsamos editar perfil
+    $_SESSION['pagina'] = 'web'; // vamos a la pagina mi cuenta
+    header("Location: index.php");
+    exit;
+}
+
 if(isset($_REQUEST['departamentos'])){
      $_SESSION['pagina'] = 'mtoDepartamentos'; // vamos a la pagina mi cuenta
     header("Location: index.php");

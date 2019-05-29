@@ -61,6 +61,7 @@
                                     <div class="col-md-4">
                                         <h3 class="text-center text-uppercase text-secondary mb-0">Mantenimiento</h3>
                                         <input type="submit" name="departamentos" value="Mto.Departamentos" class="btn btn-lg btn-block btn-success">
+                                        <input type="submit" name="websql" value="WebSql" class="btn btn-lg btn-block btn-success">
                                         <?php if ($_SESSION['usuario']->getPerfil() == 'Administrador') { ?>
                                             <input type="submit" name="wip" value="Mantenimiento de Usuarios" class="btn btn-lg btn-block btn-warning"> 
                                         <?php } ?>

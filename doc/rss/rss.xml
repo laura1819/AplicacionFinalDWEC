@@ -5,12 +5,7 @@
         <link>http://daw-used.sauces.local/DAW210/public_html/ProyectoDWES/ProyectoTema6/index.php</link>
         <description>Aplicación 18 19</description>
     
-        <item>
-            <title>Catálogo de requisitos</title>
-            <link>http://daw-used.sauces.local/DAW210/public_html/ProyectoDWES/ProyectoTema6/doc/modelosAplicacion/CatalogoDeRequisitos.pdf</link>
-            <description>Catálogo de requisitos</description>
-            <pubDate>Wed, 6 Feb 2019 17:15:00 GMT</pubDate>                
-        </item>
+        
          <item>
             <title>Diagrama de clases</title>
             <link>http://daw-used.sauces.local/DAW210/public_html/ProyectoDWES/ProyectoTema6/doc/modelosAplicacion/clases.PNG</link>
