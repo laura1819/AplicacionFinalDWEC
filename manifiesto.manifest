@@ -1,0 +1,16 @@
+CACHE MANIFEST
+# v1 2019-05-20
+# Archivo manifest de el tema 5 (sobre la app de php)
+
+#CACHE seccion predeterminada
+index.php
+layout.php
+estilos.css
+
+# Cambia a la sección de lista blanca del manifest de caché.
+NETWORK:
+index.php
+
+# Cambia a la sección fallback del manifest de caché
+FALLBACK:
+/ index.php

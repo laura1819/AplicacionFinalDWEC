@@ -1,0 +1,11 @@
+{
+  "short_name": "AplicacionFinal",
+  "name": "Aplicación Final php",
+
+  "start_url": "index.php",
+  "orientation": "landscape",
+  "theme_color": "black",
+  "background_image":"black, crimson",
+  "display": "standalone",
+  "lang": "es-ES"
+}
