@@ -69,6 +69,12 @@ if(isset($_REQUEST['departamentos'])){
     exit;
 }
 
+if(isset($_REQUEST['ajax'])){
+     $_SESSION['pagina'] = 'ajax'; // vamos a la pagina mi cuenta
+    header("Location: index.php");
+    exit;
+}
+
 //if (isset($_REQUEST['wip'])) { 
 //  $_SESSION['pagina'] = 'wip'; 
 //  header("Location: index.php");

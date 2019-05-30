@@ -70,6 +70,12 @@
 	background-position: 50% 23%;
 }
 
+#segundos{
+	background: url("webroot/css/segundos.svg") no-repeat;
+	background-size: 13%;
+	background-position: 50% 15%;
+}
+
 #uno{
 	transform: rotate(30deg);
 }

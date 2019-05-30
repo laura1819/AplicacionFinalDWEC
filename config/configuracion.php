@@ -43,6 +43,7 @@ $controladores = [
     'importar' => 'controller/cImportar.php',
     'exportar' => 'controller/cExportar.php',
     'web' => 'controller/cweb.php',
+    'ajax' => 'controller/cajax.php'
 ];
 
 $vistas = [
@@ -69,5 +70,6 @@ $vistas = [
     'importar' => 'view/vImportar.php',
     'exportar' => 'view/vExportar.php',
     'web' => 'view/vweb.php',
+    'ajax' => 'view/vajax.php'
 ];
 ?>

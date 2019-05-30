@@ -175,25 +175,30 @@
                 </table>
             </div>
             <div class="col-lg-4 mr-auto">
-                <body onload="reloj()" >
-                    <div class="contenedor">
-                        <div id="medio"></div>
-                        <div id="horas"></div>
-                        <div id="minutos"></div>
-                        <div id="uno"><span>1</span></div>
-                        <div id="dos"><span>2</span></div>
-                        <div id="tres"><span>3</span></div>
-                        <div id="cuatro"><span>4</span></div>
-                        <div id="cinco"><span>5</span></div>
-                        <div id="seis"><span>6</span></div>
-                        <div id="siete"><span>7</span></div>
-                        <div id="ocho"><span>8</span></div>
-                        <div id="nueve"><span>9</span></div>
-                        <div id="diez"><span>10</span></div>
-                        <div id="once"><span>11</span></div>
-                        <div id="doce"><span>12</span></div>
-                    </div>
-                </body>
+                <body onload="relojDigital()">
+		<input style="visibility: hidden" type="text" id="reloj">
+		<input style="visibility: hidden" type="text" id="gradosHoras">
+		<input style="visibility: hidden" type="text" id="gradosMinutos">
+		<input style="visibility: hidden" type="text" id="gradosSegundos">
+		<div class="contenedor">
+			<div id="medio"></div>
+			<div id="horas"></div>
+			<div id="minutos"></div>
+			<div id="segundos"></div>
+			<div id="uno"><span>1</span></div>
+			<div id="dos"><span>2</span></div>
+			<div id="tres"><span>3</span></div>
+			<div id="cuatro"><span>4</span></div>
+			<div id="cinco"><span>5</span></div>
+			<div id="seis"><span>6</span></div>
+			<div id="siete"><span>7</span></div>
+			<div id="ocho"><span>8</span></div>
+			<div id="nueve"><span>9</span></div>
+			<div id="diez"><span>10</span></div>
+			<div id="once"><span>11</span></div>
+			<div id="doce"><span>12</span></div>
+		</div>
+	</body>
             </div>
 
         </div>
@@ -505,18 +510,39 @@
 
 
 <script>
-    function reloj() {
-        var r = new Date();
-        hora = r.getHours();
-        gradosHoras = hora * 30;
-        minuto = r.getMinutes();
-        gradosMinutos = minuto * 6;
-        gradosHoras += minuto * 0.5;
-        segundo = r.getSeconds();
-        gradosSegundos = segundo * 6;
-        document.getElementById("horas").style.transform = 'rotate(' + gradosHoras + 'deg)';
-        document.getElementById("minutos").style.transform = 'rotate(' + gradosMinutos + 'deg)';
-    }
+    function relojDigital(){
+				var d=new Date();
+				hora=d.getHours();
+				gradosHoras=hora*30;
+				minuto=d.getMinutes();
+				gradosMinutos=minuto*6;
+				gradosHoras+=minuto*0.5;
+				segundo=d.getSeconds();
+				gradosSegundos=segundo*6;
+				document.getElementById("gradosHoras").value=gradosHoras;
+				document.getElementById("gradosMinutos").value=gradosMinutos;
+				document.getElementById("gradosSegundos").value=gradosSegundos;
+				document.getElementById("reloj").value=hora+":"+minuto+":"+segundo;
+				document.getElementById("horas").style.transform='rotate('+gradosHoras+'deg)';
+				if(hora==0){
+					document.getElementById("horas").style.transition='none';
+				}else{
+					document.getElementById("horas").style.transition='transform 1s';
+				}
+				document.getElementById("minutos").style.transform='rotate('+gradosMinutos+'deg)';
+				if(minuto==0){
+					document.getElementById("minutos").style.transition='none';
+				}else{
+					document.getElementById("minutos").style.transition='transform 1s';
+				}
+				document.getElementById("segundos").style.transform='rotate('+gradosSegundos+'deg)';
+				if(segundo==0){
+					document.getElementById("segundos").style.transition='none';
+				}else{
+					document.getElementById("segundos").style.transition='transform 1s';
+				}
+				setTimeout(relojDigital,200);
+			}
 </script>
 
 <script>
